@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id = "btn">click me</button>
+    <button class = "btnc">click me class</button> -->
+    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+    <p ></p>
+    <script>
+        // let num =15;
+        // if(num%5==0 && num%3==0){
+        //     document.write('1')
+        // }
+        // else if(num%5==0){
+        //     document.write('2')
+        // }
+        // else if(num%3==0){
+        //     document.write('3')
+        // }
+        // else{
+        //     document.write('4')
+        // }
+
+        // document.getElementById('btn').onclick = function(){
+        //     alert("Aman");
+        // }
+        // document.getElementsByClassName('btnc')[0].onclick = function(){
+        //     alert("Aman");
+        // }
+        let count = 100;
+             document.querySelector("textarea").onkeyup = function(){
+            //  let v =document.querySelector("textarea").value
+            //  document.querySelector("p").innerHTML = v;
+            count  = count-1;
+            document.querySelector("p").innerHTML = count;
+            }
+            
+    </script>
+</body>
+</html>
