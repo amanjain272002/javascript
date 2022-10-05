@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <input id="num1">
+        <select id="operators">
+            <option></option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>
+        <input id="num2">
+
+        <p></p>
+    </div>
+    <script>
+        var n1, n2, op;
+
+        document.querySelector(".wrapper").onkeyup = function () {
+            n1 = Number(document.querySelector("#num1").value)
+            console.log(n1)
+            op = document.querySelector("#operators").value;
+            console.log(op)
+            if (op == '+') {
+                document.querySelector("p").innerHTML = n1 + n2;
+            }
+            else if (op == '-') {
+                document.querySelector("p").innerHTML = n1 - n2;
+            }
+            else if (op == '/') {
+                document.querySelector("p").innerHTML = n1 / n2;
+            }
+            else {
+                document.querySelector("p").innerHTML = n1 * n2;
+            }
+            n2 = Number(document.querySelector("#num2").value)
+            console.log(n2)
+            // document.querySelector("p").innerHTML = n1+n2;
+
+
+        }
+
+    </script>
+</body>
+
+</html>
