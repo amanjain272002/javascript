@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="text1" placeholder="Enter number 1">
+    <input id="text" placeholder="Enter number 2">
+    <!-- <button>Add</button> -->
+    <select id="operators">
+        <option value="">Operation</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select> 
+
+
+
+    <script>
+        // document.querySelector("button").onclick = function(){
+        //     let var1 = Number(document.querySelector("#text1").value) 
+        //     let var2 = Number(document.querySelector("#text").value)
+        //     console.log(var1+var2)
+        // }
+            
+        document.querySelector("#operators").onchange = function(){
+            let var1 = Number(document.querySelector("#text1").value) 
+            let var2 = Number(document.querySelector("#text").value)
+            let op = document.querySelector("#operators").value;
+            if (op === '+') {
+                console.log(var1+var2)
+            }
+            else if (op == '-') {
+                console.log(var1-var2)
+            }
+            else if (op === '/') {
+                console.log(var1/var2)
+            }
+            else {
+                console.log(var1*var2)
+            }
+        }
+
+    </script>
+</body>
+</html>
