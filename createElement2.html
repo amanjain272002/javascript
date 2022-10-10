@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement2</title>
+</head>
+<body>
+    <div class="wrapper">
+    <input type="text" >
+    <select name="" id="">
+        <option value="">--</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+    </select>
+    </div>
+    <script>
+        document.querySelector("select").onchange= function(){
+            let divd = document.querySelector(".wrapper")
+            let eel  = document.querySelector("input").value;
+            let a = document.querySelector("select").value;
+            for(let i =0;i<a;i++){
+            let newElement = document.createElement("p");
+            newElement.innerHTML = eel;
+            // divd.appendChild(newElement);
+            // document.body.insertBefore(newElement,divd) ;
+            divd.appendChild(newElement)
+        }
+        
+        }
+    </script>
+</body>
+</html>

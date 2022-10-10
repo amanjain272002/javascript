@@ -8,14 +8,29 @@
 </head>
 <body>
     <div class="wrapper">
-        <input type="text" placeholder="Enter Your name ">
-        <button>Show in para</button>
-
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="Age">Age:</label>
+        <input type="number" id="number" name="number"><br><br>
+        
+        <div class="addon">
+        <label for="Qualification">Qualification:</label>
+        <input type="text" id="qualification" name="qualification" placeholder="qualification">
+        <button>+</button>
+    </div>    
+        
+        
+        
+        <input type="submit" value="Submit">
     </div>
 
     <script>
-        let a= document.querySelector('input').value;
-        // let p =
+        document.querySelector("button").onclick = function(){''
+            let newElement = document.createElement("input");
+            newElement.setAttribute('placeholder','qualification')
+            var target = document.querySelector(".addon");
+            target.insertBefore(newElement,target.childNodes[3])
+        }
     </script>
 </body>
 </html>

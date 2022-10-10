@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PushPrint</title>
+</head>
+<body>
+    <div class="wrapper">
+    <input type="text" value="">
+    <button id="add">Add to array</button>
+    <button id="print">Print</button>
+</div>
+    <script>
+        let val1;
+        let a = ["agd","fgh"];
+        let divd = document.querySelector(".wrapper")
+        document.querySelector("#add").onclick = function(){
+            console.log(a)
+            val1 = document.querySelector("input").value;
+            a.push(val1);
+            console.log(a);
+        }
+        document.querySelector("#print").onclick = function(){
+            let p = document.createElement("p");
+            a.reverse();
+            p.innerHTML = a;
+            divd.appendChild(p);
+        }
+    </script>
+</body>
+</html>
+
+<!-- settimeout,setinterval -->
