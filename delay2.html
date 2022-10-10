@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delay2</title>
+</head>
+<body>
+    <div class="wrapper">
+    <input type="text" value="">
+    <button id="add">Add to array</button>
+    <button id="print">Print</button>
+</div>
+    <script>
+        
+        let a = []
+        let btn1 = document.querySelector("#add")
+        let btn2 = document.querySelector("#print");
+        let para = document.createElement("p")
+        document.body.appendChild(para)
+        btn1.onclick  = function(){
+            let val = document.querySelector("input").value
+            a.push(val)
+            console.log(a);
+        }
+
+        btn2.onclick = function(){
+            let counter = 0
+            let interval  = setInterval(function(){
+                if(counter == a.length-1){
+                para.innerHTML = para.innerHTML  + a[counter++]
+                clearInterval(interval);
+            }
+            else{
+                para.innerHTML = para.innerHTML  + a[counter++] + " "
+            }
+            },1000)
+           
+        }
+    </script>
+</body>
+</html>
+
+<!-- settimeout,setinterval -->
