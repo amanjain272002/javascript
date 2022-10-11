@@ -31,8 +31,13 @@
 
   <script>
     let hs = document.querySelectorAll("h1")
+    console.log(hs)
     hs.forEach(function(h1){
+      let p = h1.nextElementSibling
+      console.log(p)
+      console.log(h1)
         let counter = 0;
+        
         h1.onclick = function(){
             if(counter == 0){
                 h1.nextElementSibling.style.display = "block"

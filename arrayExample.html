@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example</title>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+    <script>
+        // let a = []
+        // let a1 = [1,2,4,5,6,7,89,78]
+        // let a2 = [2,3,4,5,6,7,8,9]
+        // for(let i = 0;i<a1.length;i++){
+        //     a[i] = a1[i]+a2[8-i-1]
+            
+        // }
+        // console.log(a)
+
+        // let a4 = ['aman','rohit','gaurav','aman','akshat','rohit']
+        // let a5 = []
+        // a4.sort()
+        // console.log(a4)
+        // for(let i =1;i<a4.length+1;i++){
+
+        //     if(a4[i-1]==a4[i]){
+                
+        //     }
+        //     else{
+        //         a5[i]= a4[i-1]
+        //     }
+        // }
+        // for(let j = 0;j<a5.length;j++){
+        //     if(a5[j]==undefined){
+        //         delete(a5[j])
+        //     }
+        //     else{
+        //         console.log(a5[j])
+        //     }
+        // }
+
+        let input = ['Jaipur','Jodhpur','Udaipur','Kanpur','Jammu','Kashmir','Ladakh']
+
+        
+        
+        let object = {
+
+        }
+        
+        input.forEach(function(city){
+            let firstletter = city.slice(0,1).toLocaleLowerCase()
+            if(Object.keys(object).includes(firstletter)){
+            object[firstletter].push(city)
+        }
+            else{
+                object[firstletter] = [city]
+            }
+        })
+        console.log(object)
+</script>
+</body>
+</html>

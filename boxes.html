@@ -20,6 +20,9 @@
         span{
             float: right;
         }
+        a{
+            display: none;
+        }
     </style>
 </head>
 
@@ -27,6 +30,7 @@
     <div class="wrapper">
         <div class="box">
             <h1>Boxes<span>&times;</span></h1>
+            <a href="">Show</a>
             
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur molestias magnam qui sunt temporibus
                 impedit mollitia porro possimus! Recusandae ad velit, soluta blanditiis debitis molestias suscipit
@@ -44,7 +48,7 @@
         </div>
         <div class="box">
             <h1>Boxes<span>&times;</span></h1>
-            
+            <a href="">Show</a>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur molestias magnam qui sunt temporibus
                 impedit mollitia porro possimus! Recusandae ad velit, soluta blanditiis debitis molestias suscipit
                 libero aut repudiandae ducimus?
@@ -61,7 +65,7 @@
         </div>
         <div class="box">
             <h1>Boxes<span>&times;</span></h1>
-            
+            <a href="">Show</a>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur molestias magnam qui sunt temporibus
                 impedit mollitia porro possimus! Recusandae ad velit, soluta blanditiis debitis molestias suscipit
                 libero aut repudiandae ducimus?
@@ -78,7 +82,7 @@
         </div>
         <div class="box">
             <h1>Boxes<span>&times;</span></h1>
-            
+            <a href="">Show</a>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur molestias magnam qui sunt temporibus
                 impedit mollitia porro possimus! Recusandae ad velit, soluta blanditiis debitis molestias suscipit
                 libero aut repudiandae ducimus?
@@ -94,6 +98,36 @@
             </p>
         </div>
     </div>
+
+    <script>
+        // let span = document.querySelectorAll("span")
+        let span = document.querySelectorAll("span")
+       
+        console.log(span)
+        
+        span.forEach(function(span){
+            span.onclick = function(){
+            let p = span.parentElement
+            console.log(p)
+            let a = p.nextElementSibling
+            let para = a.nextElementSibling
+            let counter = 0;
+            if(counter == 0){
+                a.style.display = "block"
+                para.style.display = "none"
+                counter++
+            }
+            else{
+                a.style.display = "none"
+                para.style.display = "block"
+                counter--
+            }
+           
+            console.log(j)}
+
+            
+        })
+    </script>
 </body>
 
 </html>
