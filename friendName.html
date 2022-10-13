@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrapper">
+    <input type="text" placeholder="Enter Friend's name">
+    <button>Add to Array</button>
+    <button>Print a random Name</button>
+  </div>
+  <script>
+    let friends = []
+    let alreadyPrinted = []
+    const btn1 = document.querySelector("button:first-of-type")
+    const btn2 = document.querySelector("button:last-of-type")
+    btn1.onclick = () => {
+      friends.push(document.querySelector("input").value)
+      document.querySelector("input").value = ''
+      document.querySelector("input").focus()
+      console.log(friends)
+    }
+
+    btn2.onclick = () => {
+        
+       let inp =  setInterval(function(){
+            let para = document.createElement("p")
+            para.innerHTML = friends[getARandomValue()]
+            document.body.appendChild(para)
+        },1000)
+        
+        btn2.setAttribute("disabled", "disabled")
+        // clearInterval(inp)
+    }
+
+    function getARandomValue(){
+      let randomValue = Math.floor(Math.random() * friends.length)
+      if(alreadyPrinted.includes(randomValue))
+        return getARandomValue()
+      else{
+        alreadyPrinted.push(randomValue)
+        return randomValue;
+      }
+    }
+
+
+
+  </script>
+</body>
+</html>
